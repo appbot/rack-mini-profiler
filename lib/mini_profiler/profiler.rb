@@ -366,6 +366,7 @@ module Rack
               mode: :wall,
               raw: true,
               aggregate: false,
+              ignore_gc: true,
               interval: (sample_rate * 1000).to_i
             ) do
               status, headers, body = @app.call(env)
